@@ -11,8 +11,8 @@ namespace Web_Service
         public static void Register(HttpConfiguration config)
         {
             // cái này có li
-            var cors = new EnableCorsAttribute("http://cookbookweb-32.apphb.com", "*", "*");
-            config.EnableCors(cors);
+            //var cors = new EnableCorsAttribute("http://cookbookweb-32.apphb.com", "*", "*");
+            //config.EnableCors(cors);
 
             //config.EnableCors(new EnableCorsAttribute("http://localhost:1188", "*", "*"));
 
