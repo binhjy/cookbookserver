@@ -11,8 +11,8 @@ namespace Web_Service
         public static void Register(HttpConfiguration config)
         {
             // cái này có li
-            //var cors = new EnableCorsAttribute("http://cookbookweb-32.apphb.com", "*", "*");
-            //config.EnableCors(cors);
+            var cors = new EnableCorsAttribute("http://cookbookweb-32.apphb.com", "*", "*");
+            config.EnableCors(cors);
 
             //config.EnableCors(new EnableCorsAttribute("http://localhost:1188", "*", "*"));
 
@@ -30,7 +30,7 @@ namespace Web_Service
             var json = config.Formatters.JsonFormatter;
             json.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.Objects;
             config.Formatters.Remove(config.Formatters.XmlFormatter);
-            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));//đoạn cũ nó chỉ enable cho cái côkbôkweb thôi
+            //config.EnableCors(new EnableCorsAttribute("*", "*", "*"));//đoạn cũ nó chỉ enable cho cái côkbôkweb thôi
             //mình enable cho all ukm, cũng éo hiểu lắm :v 
             // là * hả
             //pro vl 
